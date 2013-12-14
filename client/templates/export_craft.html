@@ -1,0 +1,837 @@
+<template name="export_craft">
+	{{title name}}
+	<h2 class="lead row">
+		<span class="col-sm-8">{{name}}</span>
+		<span class="col-sm-4" style="text-align: right">
+			<a class="btn btn-info disabled" href="/export_craft/{{_id}}">Aвто-Экспорт</a>
+			<a class="btn btn-info" href="/edit_craft/{{_id}}">Редактировать</a>
+		</span>
+	</h2>
+	<hr>
+<textarea class="form-control" rows="20">
+
+<ac:layout>
+  <ac:layout-section ac:type="two_right_sidebar">
+    <ac:layout-cell>
+      <ac:macro ac:name="info">
+        <ac:parameter ac:name="icon">false</ac:parameter>
+        <ac:rich-text-body>
+          <p>
+            <strong style="line-height: 1.4285715;"> <span style="color: rgb(255,0,0);">И-16 тип 18 КБ Поликарпова</span> <span style="color: rgb(0,51,102);"> - <span style="color: rgb(229,229,229);"> <span style="color: rgb(0,51,102);">серия советских одномоторных монопланов, введенная в эксплуатацию в 1934.</span> </span> </span> </strong>
+          </p>
+          <ac:macro ac:name="info">
+            <ac:parameter ac:name="icon">false</ac:parameter>
+            <ac:rich-text-body>
+              <p>
+                <ac:emoticon ac:name="information"/> <ac:macro ac:name="status">
+                  <ac:parameter ac:name="colour">Blue</ac:parameter>
+                  <ac:parameter ac:name="title">Содержание</ac:parameter>
+                </ac:macro>
+              </p>
+              <p>
+                <ac:macro ac:name="toc">
+                  <ac:parameter ac:name="printable">false</ac:parameter>
+                  <ac:parameter ac:name="style">none</ac:parameter>
+                  <ac:parameter ac:name="indent">15px</ac:parameter>
+                  <ac:parameter ac:name="minLevel">2</ac:parameter>
+                  <ac:parameter ac:name="exclude">Содержание</ac:parameter>
+                </ac:macro>
+              </p>
+            </ac:rich-text-body>
+          </ac:macro>
+          <h2>
+            <span style="color: rgb(0,51,102);">Конструкция</span>
+          </h2>
+          <ac:macro ac:name="info">
+            <ac:parameter ac:name="icon">false</ac:parameter>
+            <ac:rich-text-body>
+              <ul>
+                <li>
+                  <span style="color: rgb(0,51,102);">Состав конструкции - смешанная, дерево-металлическая. </span>
+                </li>
+                <li>
+                  <span style="color: rgb(0,51,102);">Аэродинамическая схема — центроплан</span> <span style="color: rgb(0,51,102);">.</span>
+                </li>
+                <li>
+                  <span style="color: rgb(0,51,102);">Обшивка - фанерная/дюралевая.</span>
+                </li>
+                <li>
+                  <span style="color: rgb(0,51,102);">Шасси — убираемое.</span>
+                </li>
+              </ul>
+            </ac:rich-text-body>
+          </ac:macro>
+          <h2>
+            <span style="color: rgb(0,51,102);">Вооружение</span>
+          </h2>
+          <ac:macro ac:name="info">
+            <ac:parameter ac:name="icon">false</ac:parameter>
+            <ac:rich-text-body>
+              <ul>
+                <li>
+                  <span style="color: rgb(0,51,102);">Четыре 7.62мм пулемёта <ac:link>
+                      <ri:page ri:content-title="ШКАС"/>
+                      <ac:link-body> <span style="color: rgb(0,51,102);">ШКАС</span> </ac:link-body>
+                    </ac:link>.</span>
+                  <ul>
+                    <li>
+                      <span style="color: rgb(0,51,102);">Стандарт (Т-П-П-БЗ-ПЗ)</span>
+                    </li>
+                    <li>
+                      <span style="color: rgb(0,51,102);">Универсал (Т-БЗ-ПЗ-БЗТ)</span>
+                    </li>
+                    <li>
+                      <span style="color: rgb(0,51,102);">Трассеры (БЗТ)</span>
+                    </li>
+                    <li>
+                      <span style="color: rgb(0,51,102);">Скрытная атака (БЗ-БЗ-БЗ-ПЗ)</span>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <span style="color: rgb(0,51,102);">Авиа бомбы.</span>
+                  <ul>
+                    <li>
+                      <span style="color: rgb(0,51,102);">2х100 кг</span>
+                    </li>
+                    <li>
+                      <span style="color: rgb(0,51,102);">2х50 кг</span>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <span style="color: rgb(0,51,102);">Ракеты <ac:link>
+                      <ri:page ri:content-title="РС-82"/>
+                      <ac:link-body> <span style="color: rgb(0,51,102);">РС-82</span> </ac:link-body>
+                    </ac:link>.</span>
+                  <ul>
+                    <li>
+                      <span style="color: rgb(0,51,102);">6х82мм</span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </ac:rich-text-body>
+          </ac:macro>
+          <h2>
+            <span style="color: rgb(0,51,102);">Модули</span>
+          </h2>
+          <ac:macro ac:name="info">
+            <ac:parameter ac:name="icon">false</ac:parameter>
+            <ac:rich-text-body>
+              <h3>
+                <span style="color: rgb(0,51,102);">Лётные характеристики</span>
+              </h3>
+              <table>
+                <tbody>
+                  <tr>
+                    <td title="Привет!">
+                      <ac:link>
+                        <ri:attachment ri:filename="i16_type18_vs_He112B0_1920x1080_logo.jpg"/>
+                        <ac:link-body>
+                          <ac:image ac:alt="123" ac:thumbnail="true" ac:width="56">
+                            <ri:attachment ri:filename="1_1_1.png">
+                              <ri:page ri:content-title="Загрузки"/>
+                            </ri:attachment>
+                          </ac:image>
+                        </ac:link-body>
+                      </ac:link>
+                    </td>
+                    <td>
+                      <span style="color: rgb(0,51,102);">Обработка фюзеляжа</span>
+                    </td>
+                    <td>
+                      <span style="color: rgb(0,51,102);">Замена поврежденных элементов обшивки фюзеляжа, устранение щелей и обработка поверхностей для уменьшения сопротивления воздуху.</span> <br/> <span style="color: rgb(0,51,102);"> <strong> <sub>Изменение параметров самолёта:</sub> </strong> </span> <br/> <span style="color: rgb(0,51,102);"> <sub> <span style="color: rgb(51,153,102);">-0.00038</span> к коэффициенту лобового сопротивления фюзеляжа</sub> </span> <br/> <span style="color: rgb(0,51,102);"> <sub> <span style="color: rgb(51,153,102);">-0.00106</span> к коэффициенту лобового сопротивления оперения при нулевой подъёмной силе</sub> </span> <br/> <span style="color: rgb(0,51,102);"> <strong> <sub>Расчетные изменения ЛТХ от параметров самолёта:</sub> </strong> </span> <br/> <span style="color: rgb(0,51,102);"> <sub> <span style="color: rgb(51,153,102);">+4</span> км/ч к максимальной скорости</sub> </span> <br/> <span style="color: rgb(0,51,102);"> <sub> <span style="color: rgb(51,153,102);">+0.1</span> м/c к скороподъёмности</sub> </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <ac:image>
+                        <ri:attachment ri:filename="1_1_2.png">
+                          <ri:page ri:content-title="Загрузки"/>
+                        </ri:attachment>
+                      </ac:image>
+                    </td>
+                    <td>
+                      <span style="color: rgb(0,51,102);">Радиатор</span>
+                    </td>
+                    <td>
+                      <span style="color: rgb(0,51,102);">Чистка радиатора и системы охлаждения позволяет эффективнее охлаждать</span> <br/> <span style="color: rgb(0,51,102);">двигатель.</span> <br/> <span style="color: rgb(0,51,102);"> <strong> <sub>Изменение параметров самолёта:</sub> </strong> </span> <br/> <span style="color: rgb(0,51,102);"> <sub> <span style="color: rgb(51,153,102);">-5%</span> к времени охлаждения аркадного форсажа</sub> </span> <br/> <span style="color: rgb(0,51,102);"> <sub> <span style="color: rgb(51,153,102);">-0.00069</span> к коэффициенту лобового сопротивления фюзеляжа </sub> </span> <br/> <span style="color: rgb(0,51,102);"> <strong> <sub>Расчётные изменения ЛТХ от параметров самолёта:</sub> </strong> </span> <br/> <span style="color: rgb(0,51,102);"> <sub> <span style="color: rgb(51,153,102);">+3</span> км/ч к максимальной скорости.</sub> </span> <br/> <span style="color: rgb(0,51,102);"> <sub> <span style="color: rgb(51,153,102);">+0.1</span> м/с к скороподъёмности.</sub> </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <ac:image>
+                        <ri:attachment ri:filename="2_1_1.png">
+                          <ri:page ri:content-title="Загрузки"/>
+                        </ri:attachment>
+                      </ac:image>
+                    </td>
+                    <td>
+                      <p>
+                        <span style="color: rgb(0,51,102);">Компрессор</span>
+                      </p>
+                    </td>
+                    <td>
+                      <span style="color: rgb(0,51,102);">Проверка и настройка компрессора позволяет получить от двигателя максимальную</span> <br/> <span style="color: rgb(0,51,102);">мощность.</span> <br/> <span style="color: rgb(0,51,102);"> <strong> <sub>Изменение параметров самолёта:</sub> </strong> </span> <br/> <span style="color: rgb(0,51,102);"> <sub> <span style="color: rgb(51,153,102);">+41.9</span> л.с. к мощности двигателя</sub> </span> <br/> <span style="color: rgb(0,51,102);"> <strong> <sub>Расчётные изменения ЛТХ от параметров самолёта:</sub> </strong> </span> <br/> <span style="color: rgb(0,51,102);"> <sub> <span style="color: rgb(51,153,102);">+7</span> км/ч к максимальной скорости.</sub> </span> <br/> <span style="color: rgb(0,51,102);"> <sub> <span style="color: rgb(51,153,102);">+2.0</span> м/с к скороподъёмности.</sub> </span> <br/> <span style="color: rgb(0,51,102);"> <sub> <span style="color: rgb(51,153,102);">-0.2</span> сек. ко времени виража.</sub> </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <ac:image>
+                        <ri:attachment ri:filename="3_1_1.png">
+                          <ri:page ri:content-title="Загрузки"/>
+                        </ri:attachment>
+                      </ac:image>
+                    </td>
+                    <td>
+                      <p>
+                        <span style="color: rgb(0,51,102);">Обработка крыльев</span>
+                      </p>
+                    </td>
+                    <td>
+                      <p>
+                        <span style="color: rgb(0,51,102);">Замена повреждённых злементов обшивки крыльев, устранение щелей и обработка</span> <br/> <span style="color: rgb(0,51,102);">поверхностей для уменьшения сопротивления воздуху.</span>
+                      </p>
+                      <p>
+                        <span style="color: rgb(0,51,102);"> <strong> <sup>Изменение параметров самолёта:</sup> </strong> </span> <br/> <span style="color: rgb(0,51,102);"> <sup> <span style="color: rgb(51,153,102);">+0.075</span> к козффициенту зффективности распределения подъёмной силы по размаху</sup> </span> <br/> <span style="color: rgb(0,51,102);"> <sup> <span style="color: rgb(51,153,102);">-0.00193</span> к козффициенту лобового сопротивления крыла при нулевой подъёмной силе </sup> </span>
+                      </p>
+                      <p>
+                        <span style="color: rgb(0,51,102);"> <strong> <sup>Расчётные изменения ЛТХ от параметров самолёта:</sup> </strong> </span> <br/> <span style="color: rgb(0,51,102);"> <sup> <span style="color: rgb(51,153,102);">+11</span> км/ч к максимальной скорости.</sup> </span> <br/> <span style="color: rgb(0,51,102);"> <sup> <span style="color: rgb(51,153,102);">+0.6</span> м/с к скороподъёмности.</sup> </span> <br/> <span style="color: rgb(0,51,102);"> <sup> <span style="color: rgb(51,153,102);">-0.5</span> сек. ко времени виража.</sup> </span>
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <ac:image>
+                        <ri:attachment ri:filename="3_1_2.png">
+                          <ri:page ri:content-title="Загрузки"/>
+                        </ri:attachment>
+                      </ac:image>
+                    </td>
+                    <td>
+                      <p>
+                        <span style="color: rgb(0,51,102);">Двигатель</span>
+                      </p>
+                    </td>
+                    <td>
+                      <span style="color: rgb(0,51,102);">Перебор и регулировка двигателя, замена изношенного двигателя на мотор с</span> <br/> <span style="color: rgb(0,51,102);">неизрасходованным моторесурсом.</span> <br/> <span style="color: rgb(0,51,102);"> <strong> <sub>Изменение параметров самолёта:</sub> </strong> </span> <br/> <span style="color: rgb(0,51,102);"> <sub> <span style="color: rgb(51,153,102);">+57.6</span> л. с. к мощности двигателя </sub> </span> <br/> <span style="color: rgb(0,51,102);"> <strong> <sub>Расчётные изменения ЛТХ от параметров самолёта:</sub> </strong> </span> <br/> <span style="color: rgb(0,51,102);"> <sub> <span style="color: rgb(51,153,102);">+9</span> км/ч к максимальной скорости.</sub> </span> <br/> <span style="color: rgb(0,51,102);"> <sub> <span style="color: rgb(51,153,102);">+2.7</span> м/с к скороподъёмности.</sub> </span> <br/> <span style="color: rgb(0,51,102);"> <sub> <span style="color: rgb(51,153,102);">-0.3</span> сек. ко времени виража.</sub> </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <ac:image>
+                        <ri:attachment ri:filename="4_1_2.png">
+                          <ri:page ri:content-title="Загрузки"/>
+                        </ri:attachment>
+                      </ac:image>
+                    </td>
+                    <td>
+                      <span style="color: rgb(0,51,102);">Топливо 95 октан</span>
+                    </td>
+                    <td>
+                      <span style="color: rgb(0,51,102);">Использование ленд-лизовского топлива. Увеличивается мощность двигателя</span> <br/> <span style="color: rgb(0,51,102);"> <strong> <sub>Изменение параметров самолёта:</sub> </strong> </span> <br/> <span style="color: rgb(0,51,102);"> <span style="color: rgb(51,153,102);">+32.8</span> л. с. к мощности двигателя </span> <br/> <span style="color: rgb(0,51,102);"> <strong> <sub>Расчётные изменения ЛТХ от параметров самолёта:</sub> </strong> </span> <br/> <span style="color: rgb(0,51,102);"> <span style="color: rgb(51,153,102);">+6</span> км/ч к максимальной скорости.</span> <br/> <span style="color: rgb(0,51,102);"> <span style="color: rgb(51,153,102);">+1.6</span> м/с к скороподъёмности.</span> <br/> <span style="color: rgb(0,51,102);"> <span style="color: rgb(51,153,102);">-0.1</span> сек. ко времени виража.</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <ac:image>
+                        <ri:attachment ri:filename="4_1_3.png">
+                          <ri:page ri:content-title="Загрузки"/>
+                        </ri:attachment>
+                      </ac:image>
+                    </td>
+                    <td>
+                      <span style="color: rgb(0,51,102);">Форсаж</span>
+                    </td>
+                    <td>
+                      <span style="color: rgb(0,51,102);">Отрегулировать форсаж. Регулярное обслуживание и замена систем форсирования двигателя повышает зффективность работы двигателя на форсажных режимах. </span> <br/> <span style="color: rgb(0,51,102);"> <strong> <sub>Изменение параметров самолёта:</sub> </strong> </span> <br/> <span style="color: rgb(0,51,102);"> <sub> <span style="color: rgb(51,153,102);">+92.6</span> л.с. к мощности двигателя </sub> </span> <br/> <span style="color: rgb(0,51,102);"> <strong> <sub>Расчётные изменения ЛТХ от параметров самолёта:</sub> </strong> </span> <br/> <span style="color: rgb(0,51,102);"> <sub> <span style="color: rgb(51,153,102);">+5</span> км/ч к максимальной скорости.</sub> </span> <br/> <span style="color: rgb(0,51,102);"> <sub> <span style="color: rgb(51,153,102);">+5.9</span> м/с к скороподъёмности.</sub> </span> <br/> <span style="color: rgb(0,51,102);"> <sub> <span style="color: rgb(51,153,102);">-0.1</span> сек. ко времени виража.</sub>  </span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </ac:rich-text-body>
+          </ac:macro>
+          <ac:macro ac:name="info">
+            <ac:parameter ac:name="icon">false</ac:parameter>
+            <ac:rich-text-body>
+              <h3>
+                <span style="color: rgb(0,51,102);">Живучесть</span>
+              </h3>
+              <table>
+                <tbody>
+                  <tr>
+                    <td>
+                      <ac:image>
+                        <ri:attachment ri:filename="2_2_1.png">
+                          <ri:page ri:content-title="Загрузки"/>
+                        </ri:attachment>
+                      </ac:image>
+                    </td>
+                    <td>
+                      <span style="color: rgb(0,51,102);">Каркас<span style="color: rgb(255,255,255);">................</span> </span>
+                    </td>
+                    <td>
+                      <p>
+                        <span style="color: rgb(0,51,102);">Каркас</span> <br/> <span style="color: rgb(0,51,102);">Замена повреждённых элементов несущей конструкции и силового набора на новые увеличивает общую прочность корпуса самолёта, а также улучшает лётные характеристики за счёт уменьшения массы. Для некоторых самолетов это означает. что вы фактически получаете новый самолет с неизношенным и неповрежденным силовым набором. </span> <br/> <span style="color: rgb(0,51,102);"> <strong> <sub>Изменение параметров самолёта:</sub> </strong> </span> <br/> <span style="color: rgb(0,51,102);"> <span style="color: rgb(51,153,102);">+10%</span> к общей прочности каркаса</span> <br/> <span style="color: rgb(0,51,102);"> <span style="color: rgb(51,153,102);">-37.2</span> кг к массе самолёта </span> <br/> <span style="color: rgb(0,51,102);"> <strong> <sub>Расчётные изменения ЛТХ от параметров самолёта:</sub> </strong> </span> <br/> <span style="color: rgb(0,51,102);"> <span style="color: rgb(51,153,102);">+1.1</span> м/с к скороподъёмности.</span> <br/> <span style="color: rgb(0,51,102);"> <span style="color: rgb(51,153,102);">-0.3</span> сек. ко времени виража.</span>
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <ac:image>
+                        <ri:attachment ri:filename="4_2_1.png">
+                          <ri:page ri:content-title="Загрузки"/>
+                        </ri:attachment>
+                      </ac:image>
+                    </td>
+                    <td>
+                      <span style="color: rgb(0,51,102);">Обшивка</span>
+                    </td>
+                    <td>
+                      <p>
+                        <span style="color: rgb(0,51,102);">Обшивка</span> <br/> <span style="color: rgb(0,51,102);">Регулярный уход за обшивкой и замена повреждённых злементов обшивки увеличивают общую прочность конструкции самолёта, а также улучшает лётные характеристики самолёта за счёт уменьшения массы.</span> <br/> <span style="color: rgb(0,51,102);"> <strong> <sub>Изменение параметров самолёта:</sub> </strong> </span> <br/> <span style="color: rgb(0,51,102);"> <span style="color: rgb(51,153,102);">+5%</span> к общей прочности конструкции</span> <br/> <span style="color: rgb(0,51,102);"> <span style="color: rgb(51,153,102);">-44.7</span> кг к массе самолёта</span> <br/> <span style="color: rgb(0,51,102);"> <span style="color: rgb(51,153,102);">-0.00010</span> к козффициенту лобового сопротивления фюзеляжа</span> <br/> <span style="color: rgb(0,51,102);"> <span style="color: rgb(51,153,102);">-0.00029</span> к козффициенту лобового сопротивления оперения при нулевой подъёмной силе</span> <br/> <span style="color: rgb(0,51,102);"> <span style="color: rgb(51,153,102);">-0.00023</span> к козффициенту лобового сопротивления крыла при нулевой подъёмной силе </span> <br/> <span style="color: rgb(0,51,102);"> <strong> <sub>Расчётные изменения ЛТХ от параметров самолёта:</sub> </strong> </span> <br/> <span style="color: rgb(0,51,102);"> <span style="color: rgb(51,153,102);">+2</span> км/ч к максимальной скорости.</span> <br/> <span style="color: rgb(0,51,102);"> <span style="color: rgb(51,153,102);">+1.4</span> м/с к скороподъёмности.</span> <br/> <span style="color: rgb(0,51,102);"> <span style="color: rgb(51,153,102);">-0.4</span> сек. ко времени виража.</span>
+                      </p>
+                      <div>
+                        <span style="color: rgb(0,51,102);"> <br/> </span>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </ac:rich-text-body>
+          </ac:macro>
+          <ac:macro ac:name="info">
+            <ac:parameter ac:name="icon">false</ac:parameter>
+            <ac:rich-text-body>
+              <h3>
+                <span style="color: rgb(0,51,102);">Вооружение</span>
+              </h3>
+              <table>
+                <tbody>
+                  <tr>
+                    <td>
+                      <span style="color: rgb(0,51,102);"> <ac:image>
+                          <ri:attachment ri:filename="0_2.png">
+                            <ri:page ri:content-title="Загрузки"/>
+                          </ri:attachment>
+                        </ac:image> </span>
+                    </td>
+                    <td>
+                      <p>
+                        <span style="color: rgb(0,51,102);">Курсовые </span> <span style="color: rgb(0,51,102);">ленты </span> <span style="color: rgb(0,51,102);">7.62 мм</span>
+                      </p>
+                    </td>
+                    <td>
+                      <span style="color: rgb(0,51,102);">Набор 7.62-мм лент дня курсового оружия.</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span style="color: rgb(0,51,102);"> <ac:image>
+                          <ri:attachment ri:filename="0_1.png">
+                            <ri:page ri:content-title="Загрузки"/>
+                          </ri:attachment>
+                        </ac:image> </span>
+                    </td>
+                    <td>
+                      <span style="color: rgb(0,51,102);">ДЗ-40</span>
+                    </td>
+                    <td>
+                      <span style="color: rgb(0,51,102);">Возможность устанавливать на самолет бомбы весом 50 и 100 кг.</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span style="color: rgb(0,51,102);"> <ac:image>
+                          <ri:attachment ri:filename="0_3_1.png">
+                            <ri:page ri:content-title="Загрузки"/>
+                          </ri:attachment>
+                        </ac:image> </span>
+                    </td>
+                    <td>
+                      <p>
+                        <span style="color: rgb(0,51,102);">Новые</span> <span style="color: rgb(0,51,102);"> </span> <span style="color: rgb(0,51,102);">7.62мм пулемёты</span>
+                      </p>
+                    </td>
+                    <td>
+                      <p>
+                        <span style="color: rgb(0,51,102);">Замена изношенного ствола и деталей ударно-спускового механизма дня 7.62-мм пулемётов на новые улучшает кучность стрельбы и уменьшает вероятность заклинивания.</span> <br/> <span style="color: rgb(0,51,102);">7.62-мм пулемёт <ac:link>
+                            <ri:page ri:content-title="ШКАС"/>
+                            <ac:plain-text-link-body><![CDATA[ШКАС]]></ac:plain-text-link-body>
+                          </ac:link>:</span> <br/> <span style="color: rgb(0,51,102);"> <span style="color: rgb(51,153,102);">-1</span> м к разбросу оружия на дистанции 500 м.</span> <br/> <span style="color: rgb(0,51,102);"> <span style="color: rgb(51,153,102);">+25%</span> к наработке на отказ</span>
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span style="color: rgb(0,51,102);"> <ac:image>
+                          <ri:attachment ri:filename="0_4.png">
+                            <ri:page ri:content-title="Загрузки"/>
+                          </ri:attachment>
+                        </ac:image> </span>
+                    </td>
+                    <td>
+                      <span style="color: rgb(0,51,102);">РО-82</span>
+                    </td>
+                    <td>
+                      <span style="color: rgb(0,51,102);">Возможность устанавливать на самолет 6 реактивных снарядов <ac:link>
+                          <ri:page ri:content-title="РС-82"/>
+                          <ac:plain-text-link-body><![CDATA[РС-82]]></ac:plain-text-link-body>
+                        </ac:link>. </span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </ac:rich-text-body>
+          </ac:macro>
+          <ac:macro ac:name="tip">
+            <ac:rich-text-body>
+              <h2>
+                <span style="color: rgb(0,51,102);">Плюсы машины в игре</span>
+              </h2>
+              <ul>
+                <li>
+                  <span style="color: rgb(0,51,102);">Максимальная  скорость.</span>
+                </li>
+                <li>
+                  <span style="color: rgb(0,51,102);">Хорошая маневренность.</span>
+                </li>
+                <li>
+                  <span style="color: rgb(0,51,102);">Достаточно мощное вооружение </span>
+                </li>
+                <li>
+                  <span style="color: rgb(0,51,102);">Высокая скорострельность</span>
+                </li>
+              </ul>
+            </ac:rich-text-body>
+          </ac:macro>
+          <ac:macro ac:name="warning">
+            <ac:rich-text-body>
+              <h2>
+                <span style="color: rgb(0,51,102);">Минусы машины в игре</span>
+              </h2>
+              <ul>
+                <li>
+                  <span style="color: rgb(0,51,102);">Посредственная живучесть.</span>
+                </li>
+                <li>
+                  <span style="color: rgb(0,51,102);">Достаточно быстро расходуется боезапас</span>
+                </li>
+                <li>
+                  <span style="color: rgb(0,51,102);">Малое время форсажа, который рассчитан только на взлет </span>
+                </li>
+              </ul>
+            </ac:rich-text-body>
+          </ac:macro>
+          <ac:macro ac:name="panel">
+            <ac:parameter ac:name="borderColor">#1560bd</ac:parameter>
+            <ac:parameter ac:name="titleColor">#007ba7</ac:parameter>
+            <ac:rich-text-body>
+              <h2>
+                <span style="color: rgb(0,51,102);">Историческая справка</span>
+              </h2>
+              <p>
+                <span style="color: rgb(0,51,102);">И-16, как и его собрат, биплан <ac:link>
+                    <ri:page ri:content-title="И-15"/>
+                    <ac:link-body> <span style="color: rgb(0,51,102);">И-15</span> </ac:link-body>
+                  </ac:link>, был разработан в начале 1930-х годов КБ Поликарпова.</span> <span style="color: rgb(0,51,102);"> </span>
+              </p>
+              <p>
+                <span style="color: rgb(0,51,102);">Несмотря на различие принципиальных схем, эти самолёты имели много общего. Так, в обоих были использованы радиальные поршневые двигатели, что придавало им соответствующую «пухлую» форму и создавало высокое сопротивление, не позволявшее этим самолётам перешагнуть по скорости рубеж в 500 км/ч. Самолёт имел проблемы с управляемостью, вызванные задней центровкой, полученной вследствие размещения оборудования и брони за кабиной пилота. За счет этого не могло быть и речи о полете на И-16 с отпущенной ручкой управления — пилот всегда пребывал в напряжении, что также сказывалось на боевой эффективности самолёта. Несмотря на многие проблемы, в воздушном бою на высоте 3000 метров И-16 был способен эффективно противостоять ранним моделям Bf.109, слегка выигрывая у последнего в горизонтальных маневрах, но проигрывая в скорости и на вертикальных маневрах.</span> <span style="color: rgb(0,51,102);"> </span>
+              </p>
+              <p>
+                <span style="color: rgb(0,51,102);">К началу Великой Отечественной войны И-16 составлял 2/3 всей истребительной авиации Советских ВВС. С этих самолётов начинали множество известных советских летчиков. Всего было выпущено более десяти тысяч И-16 всех модификаций. Кроме задач истребителя, И-16 также выполнял работу штурмовика, будучи оснащенным 6 ракетами РС-82 или бомбовой нагрузкой до 500 кг.</span>
+              </p>
+              <p>
+                <span style="color: rgb(0,51,102);">И-16 тип 18 — модификация типа 10 с двигателем М-62 с двухскоростным нагнетателем и с винтом ВИШ-6А (2 шага). Улучшилась продольная устойчивость на виражах и петлях самолёт стал менее чувствителен к перетягиванию ручки на посадке. Вооружение 4 ШКАС с 3100 патронами. Идея возникла в действующих частях во время боевых действий на <a class="bbc_url" href="http://ru.wikipedia.org/wiki/%D0%A5%D0%B0%D0%BB%D1%85%D0%B8%D0%BD-%D0%93%D0%BE%D0%BB_(%D1%80%D0%B5%D0%BA%D0%B0)" style="text-decoration: underline;" title="Ссылка"> <span style="color: rgb(0,51,102);">Халкин-Голе</span> </a>. Поступившие ремкомплекты для <a class="bbc_url" href="http://ru.wikipedia.org/wiki/%D0%98-153" style="text-decoration: underline;" title="Ссылка"> <span style="color: rgb(0,51,102);">И-153</span> </a> стали толчком для такой переделки. Самолёт показал хорошие лётные данные и после небольших модификаций был рекомендован в серию.</span>
+              </p>
+            </ac:rich-text-body>
+          </ac:macro>
+        </ac:rich-text-body>
+      </ac:macro>
+      <ac:macro ac:name="panel">
+        <ac:parameter ac:name="borderStyle">dashed</ac:parameter>
+        <ac:parameter ac:name="borderColor">Green</ac:parameter>
+        <ac:rich-text-body>
+          <h2>
+            <span style="color: rgb(0,51,102);">Галлерея</span>
+          </h2>
+          <p>
+            <ac:macro ac:name="gallery">
+              <ac:parameter ac:name="include">i16_type18_vs_He112B0_1920x1080_logo.jpg, shot 2013.11.27 21.30.12.jpg</ac:parameter>
+            </ac:macro>
+          </p>
+        </ac:rich-text-body>
+      </ac:macro>
+      <ac:macro ac:name="tip">
+        <ac:rich-text-body>
+          <p>
+            <ac:macro ac:name="status">
+              <ac:parameter ac:name="colour">Green</ac:parameter>
+              <ac:parameter ac:name="title">СМОТРИТЕ ТАКЖЕ</ac:parameter>
+            </ac:macro>
+          </p>
+          <p>
+            <span style="color: rgb(0,51,102);"> <ac:link>
+                <ri:page ri:content-title="И-15"/>
+                <ac:plain-text-link-body><![CDATA[И-15/бис]]></ac:plain-text-link-body>
+              </ac:link> </span>
+          </p>
+        </ac:rich-text-body>
+      </ac:macro>
+      <ac:macro ac:name="info">
+        <ac:rich-text-body>
+          <p>
+            <ac:macro ac:name="status">
+              <ac:parameter ac:name="colour">Blue</ac:parameter>
+              <ac:parameter ac:name="title">Дополнительные материалы</ac:parameter>
+            </ac:macro>
+          </p>
+          <p>
+            <a href="http://ru.wikipedia.org/wiki/%D0%98-16">И-16 - Wikipedia</a>
+          </p>
+          <p>
+            <a href="http://www.airwar.ru/enc/fww2/i16.html">И-16 - Уголок неба</a>
+          </p>
+          <p>
+            <a href="http://forum.warthunder.ru/index.php?/topic/67413-i-16-tip-18-ishak/">И-16 Тип 18 "Ишак" - обсуждение на Форуме War Thunder</a>
+          </p>
+        </ac:rich-text-body>
+      </ac:macro>
+    </ac:layout-cell>
+    <ac:layout-cell>
+      <p>
+        <ac:image ac:queryparams="effects=border-simple,shadow-kn">
+          <ri:attachment ri:filename="shot 2013.12.09 15.54.18.jpg"/>
+        </ac:image>
+      </p>
+      <ac:macro ac:name="info">
+        <ac:rich-text-body>
+          <p>
+            <ac:macro ac:name="status">
+              <ac:parameter ac:name="colour">Yellow</ac:parameter>
+              <ac:parameter ac:name="title">ИГРОВАЯ ИНФОРМАЦИЯ</ac:parameter>
+            </ac:macro>
+          </p>
+          <table style="line-height: 1.4285715;">
+            <tbody>
+              <tr>
+                <td class="highlight-yellow" colspan="1" data-highlight-colour="yellow">
+                  <p>
+                    <span style="color: rgb(0,51,102);">Нация</span>
+                  </p>
+                </td>
+                <td class="highlight-yellow" colspan="1" data-highlight-colour="yellow">
+                  <p>
+                    <span style="color: rgb(153,51,0);">СССР</span>
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td class="highlight-yellow" colspan="1" data-highlight-colour="yellow">
+                  <span style="color: rgb(0,51,102);">Ранг</span>
+                </td>
+                <td class="highlight-yellow" colspan="1" data-highlight-colour="yellow">
+                  <span style="color: rgb(153,51,0);">2</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="highlight-yellow" colspan="1" data-highlight-colour="yellow">
+                  <span style="color: rgb(0,51,102);">Бонус к награде</span>
+                </td>
+                <td class="highlight-yellow" colspan="1" data-highlight-colour="yellow">
+                  <span style="color: rgb(153,51,0);">+20%</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span style="color: rgb(105,105,105);">Боезапас (шт.)</span>
+                </td>
+                <td>
+                  <span style="color: rgb(139,69,19);">2600</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span style="color: rgb(105,105,105);">Длина разбега (</span> <span style="color: rgb(105,105,105);">м</span> <span style="color: rgb(105,105,105);">)</span>
+                </td>
+                <td>
+                  <span style="color: rgb(139,69,19);">210</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span style="color: rgb(105,105,105);">Скороподъемность (м/с)</span>
+                </td>
+                <td>
+                  <span style="color: rgb(139,69,19);">27</span>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="1">
+                  <span style="color: rgb(105,105,105);">Время виража</span> <span style="color: rgb(105,105,105);"> (сек)</span>
+                </td>
+                <td colspan="1">
+                  <span style="color: rgb(139,69,19);">15,4</span>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="1">
+                  <span style="color: rgb(105,105,105);">Максимальная высота</span> <span style="color: rgb(105,105,105);"> (м)</span>
+                </td>
+                <td colspan="1">
+                  <span style="color: rgb(139,69,19);">9300</span>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="1">
+                  <span style="color: rgb(105,105,105);">Максимальная скорость (км/ч</span> <span style="color: rgb(105,105,105);">) </span>
+                </td>
+                <td colspan="1">
+                  <span style="color: rgb(139,69,19);">488</span>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="1">
+                  <span style="color: rgb(105,105,105);">Комплектов вооружения (шт.)</span>
+                </td>
+                <td colspan="1">
+                  <span style="color: rgb(153,51,0);">4</span>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="1">
+                  <span style="color: rgb(105,105,105);">Вес секундного залпа (кг/сек)</span>
+                </td>
+                <td colspan="1">
+                  <span style="color: rgb(139,69,19);">1,16</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="highlight-yellow" colspan="1" data-highlight-colour="yellow">
+                  <span style="color: rgb(0,51,102);">Время бесплатного ремонта, мин</span>
+                </td>
+                <td class="highlight-yellow" colspan="1" data-highlight-colour="yellow">
+                  <span style="color: rgb(153,51,0);">19</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="highlight-yellow" colspan="1" data-highlight-colour="yellow">
+                  <span style="color: rgb(0,51,102);">Максимальная цена ремонта (сер.) </span>
+                </td>
+                <td class="highlight-yellow" colspan="1" data-highlight-colour="yellow">
+                  <span style="color: rgb(153,51,0);">417</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="highlight-yellow" colspan="1" data-highlight-colour="yellow">
+                  <span style="color: rgb(0,51,102);">Цена обучения команды (сер.)</span>
+                </td>
+                <td class="highlight-yellow" colspan="1" data-highlight-colour="yellow">
+                  <span style="color: rgb(153,51,0);">600</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </ac:rich-text-body>
+      </ac:macro>
+      <ac:macro ac:name="info">
+        <ac:rich-text-body>
+          <p>
+            <ac:macro ac:name="status">
+              <ac:parameter ac:name="colour">Blue</ac:parameter>
+              <ac:parameter ac:name="title">ПАСПОРТНЫЕ ЛТХ</ac:parameter>
+            </ac:macro>
+          </p>
+          <table style="line-height: 1.4285715;">
+            <tbody>
+              <tr>
+                <th>
+                  <span style="color: rgb(0,51,102);"> <em>Двигатель</em> </span>
+                </th>
+                <th> </th>
+              </tr>
+              <tr>
+                <td>
+                  <strong> <span style="color: rgb(40,40,40);">Наименование</span> </strong>
+                </td>
+                <td>M-62</td>
+              </tr>
+              <tr>
+                <td>
+                  <strong> <span style="color: rgb(40,40,40);">Количество цилиндров</span> </strong>
+                </td>
+                <td>9</td>
+              </tr>
+              <tr>
+                <td>
+                  <strong> <span style="color: rgb(40,40,40);">Турбонаддув</span> </strong>
+                </td>
+                <td>
+                  <span style="color: rgb(40,40,40);">2 </span> <span style="color: rgb(40,40,40);">скоростной</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <strong> <span style="color: rgb(40,40,40);">Сухой вес</span> </strong>
+                </td>
+                <td>520 кг</td>
+              </tr>
+              <tr>
+                <td>
+                  <p>
+                    <strong> <span style="color: rgb(40,40,40);">Мощность </span> <span style="color: rgb(40,40,40);">Взлетная</span> </strong>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <span style="color: rgb(40,40,40);">1000 </span> <span style="color: rgb(40,40,40);">Л.С.</span>
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <th colspan="1">
+                  <span style="color: rgb(0,51,102);"> <em>Винт</em> </span>
+                </th>
+                <th colspan="1"> </th>
+              </tr>
+              <tr>
+                <td colspan="1">
+                  <strong> <span style="color: rgb(40,40,40);">Наименование</span> <span style="color: rgb(40,40,40);"> </span> </strong>
+                </td>
+                <td colspan="1">АВ-1</td>
+              </tr>
+              <tr>
+                <td colspan="1">
+                  <strong> <span style="color: rgb(40,40,40);">Диаметр</span> </strong>
+                </td>
+                <td colspan="1">2,8 <span style="color: rgb(40,40,40);">м</span>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="1">
+                  <strong> <span style="color: rgb(40,40,40);">Количество лопастей</span> </strong>
+                </td>
+                <td colspan="1">2</td>
+              </tr>
+              <tr>
+                <td colspan="1">
+                  <strong> <span style="color: rgb(40,40,40);">Максимальная ширина лопасти</span> </strong>
+                </td>
+                <td colspan="1">0,250 м</td>
+              </tr>
+              <tr>
+                <td colspan="1">
+                  <strong> <span style="color: rgb(40,40,40);">Вес</span> </strong>
+                </td>
+                <td colspan="1">73 кг</td>
+              </tr>
+              <tr>
+                <th colspan="1">
+                  <em> <span style="color: rgb(0,51,102);">Основные Геометрические и регулировочные данные</span> </em>
+                </th>
+                <th colspan="1"> </th>
+              </tr>
+              <tr>
+                <td colspan="1">
+                  <strong> <span style="color: rgb(40,40,40);">Размах крыла</span> </strong>
+                </td>
+                <td colspan="1">9,00 м</td>
+              </tr>
+              <tr>
+                <td colspan="1">
+                  <strong> <span style="color: rgb(40,40,40);">Длина</span> </strong>
+                </td>
+                <td colspan="1">6.07 м</td>
+              </tr>
+              <tr>
+                <td colspan="1">
+                  <strong> <span style="color: rgb(40,40,40);">Высота</span> </strong>
+                </td>
+                <td colspan="1">3.25 м</td>
+              </tr>
+              <tr>
+                <td colspan="1">
+                  <strong> <span style="color: rgb(40,40,40);">Площадь крыла с элеронами</span> </strong>
+                </td>
+                <td colspan="1">14,54<span style="color: rgb(40,40,40);"> </span>м²</td>
+              </tr>
+              <tr>
+                <td colspan="1">
+                  <strong> <span style="color: rgb(40,40,40);">Вес</span> </strong>
+                </td>
+                <td colspan="1">
+                  <span style="color: rgb(40,40,40);">1433</span> кг</td>
+              </tr>
+              <tr>
+                <td colspan="1">
+                  <strong> <span style="color: rgb(40,40,40);">Взлетный вес</span> </strong>
+                </td>
+                <td colspan="1">
+                  <span style="color: rgb(40,40,40);">1830</span> <span style="color: rgb(40,40,40);"> </span>кг</td>
+              </tr>
+              <tr>
+                <th colspan="1">
+                  <em> <strong> <span style="color: rgb(0,51,102);">Показатели максимальных скоростей</span> </strong> </em>
+                </th>
+                <th colspan="1"> </th>
+              </tr>
+              <tr>
+                <td colspan="1">
+                  <strong> <span style="color: rgb(40,40,40);">0 м</span> </strong>
+                </td>
+                <td colspan="1">
+                  <span style="color: rgb(40,40,40);">413 км/ч</span>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="1">
+                  <strong> <span style="color: rgb(40,40,40);">4400 м</span> </strong>
+                </td>
+                <td colspan="1">
+                  <span style="color: rgb(40,40,40);">461 км/ч</span>
+                </td>
+              </tr>
+              <tr>
+                <th colspan="1">
+                  <span style="color: rgb(0,51,102);"> <em>Показатели скороподъемности</em> </span>
+                </th>
+                <th colspan="1"> </th>
+              </tr>
+              <tr>
+                <td colspan="1">
+                  <strong> <span style="color: rgb(40,40,40);">3000 м</span> </strong>
+                </td>
+                <td colspan="1">
+                  <span style="color: rgb(40,40,40);"> 2,9 мин</span>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="1">
+                  <strong> <span style="color: rgb(40,40,40);">5000 м</span> </strong>
+                </td>
+                <td colspan="1">
+                  <span style="color: rgb(40,40,40);"> 5,4 мин</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </ac:rich-text-body>
+      </ac:macro>
+    </ac:layout-cell>
+  </ac:layout-section>
+</ac:layout>
+<ac:layout>
+  <ac:layout-section ac:type="two_right_sidebar">
+    <ac:layout-cell>
+      <p> </p>
+    </ac:layout-cell>
+    <ac:layout-cell>
+      <p> </p>
+    </ac:layout-cell>
+  </ac:layout-section>
+</ac:layout>
+
+</textarea>
+</template>

@@ -1,0 +1,260 @@
+<template name="add_craft">
+	{{title name}}
+	<h2 class="lead">Добавить технику</h2>
+	<hr>
+	<form role="form" class="form-horizontal add_craft">
+	  <div class="form-group">
+	  	<div class="col-sm-8">
+	    	<label for="name">Название</label>
+				<input type="text" class="form-control" id="name" name="name" value="{{name}}" >
+	  	</div>
+	  	<div class="col-sm-2">
+	    	<label for="year">Год</label>
+				<input type="text" class="form-control" id="name" name="year" value="{{year}}" >
+	  	</div>
+	  	<div class="col-sm-2">
+	    	<label for="rang">Ранг</label>
+				<input type="number" class="form-control" id="rang" name="rang" value="{{rang}}">
+	  	</div>
+	  </div>
+	  <div class="form-group">
+		  <div class="col-sm-3">
+		  	<label for="nation">Нация</label>
+				<select name="nation" class="select-block" id="nation" data-value="{{nation}}" title='Choose one of the following...'>
+          <option >Выбрать</option>
+          <option value="СССР">СССР</option>
+          <option value="Германия">Германия</option>
+          <option value="США">США</option>
+          <option value="Великобритания">Великобритания</option>
+          <option value="Япония">Япония</option>
+          <option value="Италия">Италия</option>
+          <option value="Австралия">Австралия</option>
+        </select>
+		  </div>
+	  	<div class="col-sm-4">
+	    	<label for="type">Тип техники</label>
+				<select name="type" class="select-block" id="type"  data-value="{{type}}">
+          <option>Выбрать</option>
+          <option value="Авиация">Авиация</option>
+          <option value="Наземная техника">Наземная техника</option>
+          <option value="Флот">Флот</option>
+        </select>
+	  	</div>
+	  	<div class="col-sm-5">
+	    	<label for="class">Класс техники</label>
+				<select name="class" class="select-block" id="class" multiple data-value="{{class}}" title='Выбрать...'>
+          <option value="Истребитель">Истребитель</option>
+          <option value="Тяжелый истребитель">Тяжелый истребитель</option>
+          <option value="Штурмовик">Штурмовик</option>
+          <option value="Бомбардировщик">Бомбардировщик</option>
+          <option value="Пикирующий бомбардировщик">Пикирующий бомбардировщик</option>
+          <option value="Тяжелый бомбардировщик">Тяжелый бомбардировщик</option>
+          <option value="Летающая лодка">Летающая лодка</option>
+          <option value="Гидроплан">Гидроплан</option>
+          <option value="Торпедоносец">Торпедоносец</option>
+        </select>
+	  	</div>
+	  </div>
+	  
+		<hr>
+		
+		<div class="form-group">
+		  <div class="col-sm-12">
+		  	<label for="summary">Короткое описание</label>
+				<textarea  name="summary" class="form-control" >{{summary}}</textarea>
+			</div>
+		</div>
+		<div class="form-group">
+		  <div class="col-sm-12">
+		  	<label for="construction" >Конструкция <small>инфо тест</small></label>
+				<textarea  name="construction" class="form-control" >{{construction}}</textarea>
+			</div>
+		</div>
+		
+		<hr>
+		
+		<div class="ammo_wrapper">
+			<label>Вооружение</label><br><br>
+			{{#if ammo}}
+				{{#each ammo}}
+					<article class="ammo">
+					<div class="form-group">
+					  <div class="col-sm-4">
+							<input type="text" class="form-control ammo" data-name="ammo" value="{{ammo}}" placeholder="название">
+						</div>
+						<div class="col-sm-2">
+							<input type="number" class="form-control ammo_value" data-name="ammo_value" value="{{ammo_value}}" placeholder="количество">
+						</div>
+						<div class="col-sm-3">
+							<select class="select-block ammo_type" data-name="ammo_type" data-value="{{ammo_type}}" value="{{ammo_type}}" >
+			          <option>Выбрать</option>
+			          <option value="Пулемет">Пулемет</option>
+			          <option value="Пушка">Пушка</option>
+			          <option value="Бомбы">Бомбы</option>
+			          <option value="Ракеты">Ракеты</option>
+							</select>
+						</div>
+						<div class="col-sm-3">
+							<div class="btn-group pull-right adddel">
+							<button type="button" class="btn btn-default btn-xs add">+</span></button>
+							<button type="button" class="btn btn-default btn-xs del">-</span></button>
+							</div>
+						</div>
+					</div>
+					<div class="form-group ammo_details">
+						<div class="col-sm-12">
+							<input type="text" class="form-control" data-name="ammo_details" value="{{ammo_details}}" placeholder="">
+						</div>
+					</div>
+					</article>					
+				{{/each}}
+			{{else}}
+			<article class="ammo">
+			<div class="form-group">
+			  <div class="col-sm-4">
+					<input type="text" class="form-control ammo" data-name="ammo" value="" placeholder="название">
+				</div>
+				<div class="col-sm-2">
+					<input type="number" class="form-control ammo_value" data-name="ammo_value" value="" placeholder="количество">
+				</div>
+				<div class="col-sm-3">
+					<select class="select-block ammo_type" data-name="ammo_type" value="" >
+	          <option>Выбрать</option>
+	          <option value="Пулемет">Пулемет</option>
+	          <option value="Пушка">Пушка</option>
+	          <option value="Бомбы">Бомбы</option>
+	          <option value="Бомбы">Ракеты</option>
+					</select>
+				</div>
+				<div class="col-sm-3">
+					<div class="btn-group pull-right adddel">
+					<button type="button" class="btn btn-default btn-xs add">+</span></button>
+					<button type="button" class="btn btn-default btn-xs del">-</span></button>
+					</div>
+				</div>
+			</div>
+			<div class="form-group ammo_details">
+				<div class="col-sm-12">
+					<input type="text" class="form-control" data-name="ammo_details" value="" placeholder="">
+				</div>
+			</div>
+			</article>
+			{{/if}}
+		</div>
+		
+		<hr>
+		
+		<div class="form-group">
+		  <div class="col-sm-6">
+		  	<label for="pluses">Плюсы машины в игре</label>
+				<textarea  name="pluses" class="form-control" >{{pluses}}</textarea>
+			</div>
+			<div class="col-sm-6">
+		  	<label for="minuses">Минусы машины в игре</label>
+				<textarea  name="minuses" class="form-control" >{{minuses}}</textarea>
+			</div>
+		</div>	
+		
+		<hr>
+		
+		<div class="form-group">
+		  <div class="col-sm-12">
+		  	<label for="info">Историческая справка</label>
+				<textarea  name="info" class="form-control redactor" >{{info}}</textarea>
+			</div>
+		</div>
+		
+		<hr>		
+
+		<div class="form-group">
+		</div>
+		<div class="form-group">
+		  <div class="col-sm-12">
+		  	<table class="table table-striped table-bordered table-hover modules">
+			  	<tr><th></th><th class="col-sm-2">Название</th><th>Характеристики</th><th class="col-sm-1"></th></tr>
+			  	{{#each module}}
+			  	<tr class="module {{disabled ../this}}" data-id="{{_id}}">
+			  		<td>
+			  			<a><img src="/{{_id}}.png" /></a> 
+			  		</td>
+						<td><strong>{{name}}</strong></td>
+						<td><div class="data">
+								<p>{{info}}</p>
+								<p><strong>Изменение параметров самолёта:</strong></p>
+								{{#each type1}}
+									<p><input class="form-control input-sm" type="text" data-name="{{id}}" value="{{mod_val ../../this}}">{{text}}</p>
+								{{/each}}	
+								<p><strong>Изменение параметров самолёта:</strong></p>
+								{{#each type2}}
+									<p><input class="form-control input-sm" type="text" data-name="{{id}}" value="{{mod_val ../../this}}"/>{{text}}</p>
+								{{/each}}	
+								</div>
+						</td>
+						<td>
+							<div class="data">
+							<p>Опыт: <input class="form-control input-sm" value="{{exp_val ../this}}" data-name="exp" type="text"/></p>
+							<p>Цена, львы: <input class="form-control input-sm" value="{{price_val ../this}}" data-name="price" type="text"/></p>
+							<p>Цена, орлы: <input class="form-control input-sm" value="{{gold_price_val ../this}}" data-name="gold_price" type="text"/></p>
+							<p>Ремонт: <input class="form-control input-sm" value="{{repair_price ../this}}" data-name="repair_price" type="text"/></p>
+							</div>
+						</td>
+					</tr>
+			  	{{/each}}		
+					<tr><th></th><th class="col-sm-2">Название</th><th>Характеристики</th><th class="col-sm-1"></th></tr>
+		  	</table>
+			</div>
+		</div>
+		
+		<hr>
+		
+		<div class="links">
+		<div class="form-group">
+	  	<div class="col-sm-8">
+	    	<label for="link1">Дополнительные материалы - ссылки</label>
+				<input type="text" class="form-control link" data-name="link" value="" >
+	  	</div>
+	  	<div class="col-sm-4">
+	    	<label for="title1">Текст ссылки</label>
+				<input type="text" class="form-control title" data-name="title" value="" >
+	  	</div>
+	  </div>
+	  <div class="form-group">
+	  	<div class="col-sm-8">
+				<input type="text" class="form-control link" data-name="link" value="" >
+	  	</div>
+	  	<div class="col-sm-4">
+				<input type="text" class="form-control title" data-name="title" value="" >
+	  	</div>
+	  </div>
+	  <div class="form-group">
+	  	<div class="col-sm-8">
+				<input type="text" class="form-control link" data-name="link" value="" >
+	  	</div>
+	  	<div class="col-sm-4">
+				<input type="text" class="form-control title" data-name="title" value="" >
+	  	</div>
+	  </div>
+	  <div class="form-group">
+	  	<div class="col-sm-8">
+				<input type="text" class="form-control link" data-name="link" value="" >
+	  	</div>
+	  	<div class="col-sm-4">
+				<input type="text" class="form-control title" data-name="title" value="" >
+	  	</div>
+	  </div>
+		</div>
+		
+		<hr>
+		
+		<div class="form-group">
+			<div class="col-sm-9">
+	  		<button type="submit" class="btn btn-primary save">Сохранить</button>
+	  		<button type="button" class="btn btn-default cancel">Отмена</button>
+			</div>
+			<div class="col-sm-3">
+	  		<button type="button" class="btn btn-default pull-right">Редактировать галерею</button>
+			</div>
+		</div>
+	</form>
+
+</template>

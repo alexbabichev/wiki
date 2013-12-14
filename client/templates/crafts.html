@@ -1,0 +1,106 @@
+<template name="craft">
+	{{title name}}
+	<h2 class="lead row">
+		<span class="col-sm-8">{{name}}</span>
+		<span class="col-sm-4" style="text-align: right">
+			<a class="btn btn-default" href="/export_craft/{{_id}}">Экспорт</a>
+			<a class="btn btn-default" href="/edit_craft/{{_id}}">Редактировать</a>
+		</span>
+	</h2>
+	<hr>
+	<div class="row">
+		<div class="col-sm-10 craft_info">
+			<section>{{{summary}}}</section>
+			<section>
+				<h4 class="lead">Конструкция</h4>
+				<article>
+					{{{list_formated construction}}}
+				</article>
+			</section>
+			<section>
+				<h4 class="lead">Вооружение</h4>
+				<article>
+					<ul>
+					{{#each ammo}}
+						<li>{{ammo_type}}: {{ammo}}
+							{{{ammo_info}}}
+						</li>
+					{{/each}}
+					</ul>
+				</article>
+			</section>
+			
+			<section>
+				<h4 class="lead">Модули</h4>
+				<article class="modules">
+					{{#each module}}
+						{{#if enabled ../this}}
+						<div class="module">
+							<img src="/{{_id}}.png" />
+							<div class="module_info">
+								<p><strong>{{name}}</strong></p>
+								<p>{{info}}</p>
+									<p><strong>Изменение параметров самолёта:</strong></p>
+									{{#each type1}}
+										<p> <span>{{mod_val ../../../this}}</span> {{text}}</p>
+									{{/each}}	
+									<p><strong>Изменение параметров самолёта:</strong></p>
+									{{#each type2}}
+										<p> <span>{{mod_val ../../../this}}</span> {{text}}</p>
+									{{/each}}	
+									<hr>
+								<p>Опыт: <span>{{exp_val ../../this}}</span></p>
+							</div>
+						</div>
+						{{/if}} 
+					{{/each}}
+				</article>
+			</section>
+			
+			<section>
+				<h4 class="lead">Плюсы машины в игре</h4>
+				<article>
+					{{{list_formated pluses}}}
+				</article>
+			</section>
+			<section>
+				<h4 class="lead">Минусы машины в игре</h4>
+				<article>
+					{{{list_formated minuses}}}
+				</article>
+			</section>
+			
+			<section>
+				<h4 class="lead">Историческая справка</h4>
+				<article>
+					{{{info}}}
+				</article>
+			</section>
+			
+			<section>
+				<h4 class="lead">Галерея</h4>
+				<article>
+					...
+				</article>
+			</section>
+			
+			<section>
+				<h4 class="lead">Дополнительные Материалы</h4>
+				<article>
+					<br>
+					{{#each links}}
+						[ <a href="{{href.link}}">{{href.title}}</a> ]&nbsp;
+					{{/each}}				</article>
+			</section>
+		</div>
+		<div class="col-sm-2 craft_sidebar">
+			<p><img src="/crafts/{{_id}}.png"></p>
+			<p><strong>Год: </strong>{{year}}</p>
+			<p><strong>Нация: </strong>{{nation}}</p>
+			<p><strong>Тип: </strong>{{type}}</p>
+			<p><strong>Класс: </strong>{{class}}</p>
+			<p></p>
+		</div>
+	</div>
+		
+</template>

@@ -1,0 +1,95 @@
+<head>
+  <title>wiki test</title>
+</head>
+
+<body>
+  {{!layout}}
+</body>
+
+<template name="layout">
+	{{> main}}
+</template>
+
+
+<template name="main">
+	<section class="wrapper">
+		<aside class="sidebar">
+			<nav class="navmenu navmenu-inverse" role="navigation">
+			  <a class="navmenu-brand" href="/">
+			  	<img src="/logo.png"><br>
+					<span>WIKI</span>
+			  </a><br><br>
+			  <ul class="nav navmenu-nav">
+			    <li class="active"><a href="/">Техника</a></li>
+			    <li><a href="/modules">Модули</a></li>
+			    <li class="divider"></li>
+			    <li class="dropdown">
+			      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Админ часть<b class="caret"></b></a>
+			      <ul class="dropdown-menu navmenu-nav" role="menu">
+			        <li><a href="/add_craft">Добавить технику</a></li>
+			        <li><a href="/add_module">Добавить mодуль</a></li>
+			      </ul>
+			    </li>
+			  </ul>
+			</nav>
+		</aside>
+	  <section class="content">
+		  {{yield}}
+	  </section>
+	</section>
+</template>
+
+
+<template name="homepage">
+
+	{{title 'Авиация'}}
+
+	<h2 class="lead row">
+		<span class="col-sm-8">Авиация</span>
+		<span class="col-sm-4 lead-search">
+			<input type="search" class="form-control search" placeholder="Быстрый поиск">
+		</span>
+	</h2>
+	<hr>
+
+	<section id="filter">
+		<nav>
+			<ul>
+				<li class="active"><a href="#">Все</a></li>
+				<li><a href="#">СССР</a></li>
+				<li><a href="#">Германия</a></li>
+				<li><a href="#">Великобритания</a></li>
+				<li><a href="#">США</a></li>
+				<li><a href="#">Япония</a></li>
+				<li><a href="#">Австралия</a></li>
+				<li><a href="#">Италия</a></li>
+			</ul>
+			<ul class="class">
+				<li class="active"><a href="#">Все</a></li>
+				<li><a href="#">Истребитель</a></li>
+				<li><a href="#">Тяжелый истребитель</a></li>
+				<li><a href="#">Штурмовик</a></li>
+				<li><a href="#">Бомбардировщик</a></li>
+				<li><a href="#">Пикирующий бомбардировщик</a></li>
+				<li><a href="#">Тяжелый бомбардировщик</a></li>
+				<li><a href="#">Летающая лодка</a></li>
+				<li><a href="#">Гидроплан</a></li>
+				<li><a href="#">Торпедоносец</a></li>
+			</ul>
+		</nav>
+	</section>
+	
+	<hr>
+	<div class="row view_crafts">
+	{{#each craft}}
+		<div class="col-sm-2 Все {{nation}} {{craft_class}} {{year}}" data-filter="">
+			<div>
+				<a href="/craft/{{_id}}"><img src="/crafts/{{_id}}.png"><span class="name">{{name}}</span></a>
+				<span>{{nation}}, {{year}}</span>
+				<span>{{{craft_class_br}}}</span>
+			</div>
+		</div>
+	{{/each}}
+	</div>
+</template>
+

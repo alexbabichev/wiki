@@ -1,0 +1,184 @@
+/* CSS declarations go here */
+html, body {
+	height: 100%;
+}
+body {
+	margin: 0;
+	font-family: "Helvetica", Arial, sans-serif;
+	font-size: 12px;
+	line-height: 20px;
+	color: #444;
+	background-color: #f4f3f0;
+	-webkit-font-smoothing: antialiased;
+	}
+	body > section {
+		display: table;
+		width: 100%;
+		height: 100%;
+		}
+		body .content, 
+		body aside {
+			display: table-cell;
+			vertical-align: top;
+		}
+		body .content {
+			overflow: scroll;
+			padding: 20px;
+		}
+		body .content > h2 {
+			margin-top: 0;
+		}
+		
+a { color: #dd3317;  }
+	a:hover { text-decoration: underline; color: #dd3317; opacity: 0.85; } 
+
+hr {
+	border-color: #1e1e1e;
+	border-style: dotted;
+	opacity: 0.5; 
+}
+
+.right { text-align: right; }
+
+h4.lead {
+	font-size: 20px;
+}
+
+.lead-search:after {
+	position: absolute;
+	font-family: 'Flat-UI-Icons';
+	content: "\e01c";
+	font-size: 16px;
+	line-height: 17px;
+	display: inline-block;
+	top: 50%;
+	left: 92%;
+	margin: -0.5em 0 0 -1em;
+	color: #CCC;
+}
+
+.btn-default { background-color: #5C7D7D }
+.btn-default:hover { background-color: #5C7D7D; }
+.btn-primary { background-color: #7ba60d }
+.btn-primary:hover { background-color: #7ba60d; }
+
+/* aside 				--------------------------------------- */
+
+body aside {
+	width: 240px;
+	background: #1e1e1e;
+	border-right: 5px solid #dd3317; /* red */ /* #b45151 - old */
+	}
+	aside .navmenu {
+		width: auto;
+		}
+		aside ul.dropdown-menu.navmenu-nav {
+			margin-top: 0 !important;
+		}
+		.nav .open > a, .nav .open > a:hover, .nav .open > a:focus { border: 0; }
+		aside ul li {
+		/* 	border-bottom: 1px solid #333; */
+		}
+		aside ul a { 
+			color: #aaa;
+			font-size: 12px; 
+			font-weight: bold; 
+			text-transform: uppercase;
+			text-shadow: 0 1px 0 rgba(0,0,0,0.5);
+			background-color: transparent;
+		}
+		
+		.navmenu-inverse .navmenu-nav > .active > a {
+			text-shadow: 0 -1px 0 rgba(0,0,0,0.3);
+			background-color: #dd3317;
+		}
+		
+		.navmenu-inverse { background-color: #1b2529; border: none; border-radius: 0; }
+		
+		.navmenu-brand {text-align: center;}
+
+/* homepage 		--------------------------------------- */
+
+.view_crafts > div {margin-bottom: 30px;}
+	.view_crafts > div > div { height: 210px; text-align: center; background-color: white; border: 1px solid #CCC; }
+	.view_crafts > div > div:hover { outline: 5px solid #DDD; }
+	.view_crafts > div span { font-size: 10px; line-height: 1.3; display: block; }
+	.view_crafts > div a { color: #dd3317; position: relative;  }
+	.view_crafts > div a img { position: relative; z-index: 20; }
+	.view_crafts > div .year { position: absolute; z-index: 30; top: 2px; right: 20px; }
+
+#filter ul { list-style: none; margin: 0; padding: 0; border-bottom: 3px solid #dd3317; margin-bottom: 20px; }
+	#filter ul li { list-style-type: none; display: inline-block; padding: 5px 5px; }
+		#filter ul li a { color: #444; text-decoration: none; }
+			#filter ul li a:hover { color: #dd3317; }
+	#filter ul li.active { background-color: #dd3317; }
+		#filter ul li.active a { color: white; }
+
+#filter ul.class li:not(:first-child) a {letter-spacing: -0.1em}
+
+/* view craft		--------------------------------------- */
+
+.craft_sidebar p {
+	font-size: 12px;
+	margin-bottom: 0;
+}
+
+.craft_info section {
+	
+}
+.craft_info section h4 { 
+	margin-bottom: 0; /* color: #2980B9; color: #5C7D7D */; 
+	border-left: 5px solid #dd3317; 
+	/* border-top: 1px bottom #dd3317; */
+	background-color: rgba(0,0,0,0.05);
+	padding-left: 15px;  
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.craft_info section article { padding-left: 20px; }
+.craft_info section p {
+	font-size: 12px;
+}
+.craft_info section ul {
+	padding-left: 15px; 
+	margin-top: 10px;
+}
+.craft_info section ul ul { margin-top: 0 }
+.craft_info section .modules { padding-top: 20px; padding-bottom: 20px;  }
+.craft_info .module { position: relative; display: inline-block; cursor: pointer; } 
+.craft_info .module_info {
+	display: none;
+	position: absolute;
+	z-index: 5;
+	background-color: white;
+	left: 60px; top: 0;
+	width: 500px; padding: 20px;
+	border: 1px solid #ccc;
+}
+.craft_info .module_info p { margin-bottom: 0; }
+.craft_info .module_info p span { color: #27AE60; font-weight: bold; }
+.craft_info .module:hover .module_info { display: block; }
+
+
+/* add craft		--------------------------------------- */
+
+.add_craft label small { opacity: 0.5; margin-left: 3px; font-style: italic;  }
+	.add_craft label:hover small { opacity: 0.9; }
+
+.adddel .btn { width: 30px; }
+.ammo_details  { display: none; } 
+
+.module a { cursor: pointer; display: inline-block; }
+.module a:hover {  outline: 3px solid #CCC; }
+
+.module.disabled .data { display: none; }
+
+/* fixes		 		--------------------------------------- */
+
+.checkbox .icons .first-icon, .radio .icons .first-icon, .checkbox .icons .second-icon, .radio .icons .second-icon
+{
+	background-color: transparent;
+}
+.table.modules p { font-size: 12px; margin-bottom: 5px; }
+.table.modules p .input-sm { display: inline-block; width: 100px; margin-right: 10px; }
+.table.modules p .input-sm {  }
