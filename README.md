@@ -1,1 +1,1 @@
-test wiki hook !!
+test wiki !!
