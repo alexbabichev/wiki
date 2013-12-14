@@ -108,3 +108,19 @@ Template.craft.helpers({
 		return info;
 	}
 });
+
+
+/* --------------------------------------------------------------------------------------------------------- */
+
+Template.export_craft.helpers({
+	list_formated: function(param){
+		console.log(param);
+		if ((param) && (param !== ''))
+		{
+			var temp = param.split(';');
+					temp = '<ul><li>'+temp.join('</li><li>')+'</li><ul/>';
+			return temp;
+		}
+	},
+});
+
