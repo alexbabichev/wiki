@@ -1,0 +1,14 @@
+<head>
+  <title>MeteorJS terminal</title>
+</head>
+ 
+<body>
+  {{> terminal}}
+</body>
+ 
+<template name="terminal">
+ <pre>{{ window }}</pre>
+ <input id="command" type="text" value="{{ last_cmd }}" />
+ <input id="button" type="button" value="Run" />
+ <a href="#" id="test">adsads</a>
+</template>
