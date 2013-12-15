@@ -63,7 +63,7 @@ Template.craft.helpers({
 		if ((param) && (param !== ''))
 		{
 			var temp = param.split(';');
-					temp = '<ul><li>'+temp.join('</li><li>')+'</li><ul/>';
+					temp = '<ul><li>'+temp.join('</li><li>')+'</li></ul>';
 			return temp;
 		}
 	},
@@ -104,7 +104,7 @@ Template.craft.helpers({
 	},
 	ammo_info: function(){
 		var info = (this.ammo_details).split(';');
-				info = '<ul><li>'+info.join('</li><li>')+'</li><ul/>';
+				info = '<ul><li>'+info.join('</li><li>')+'</li></ul>';
 		return info;
 	}
 });
@@ -114,13 +114,21 @@ Template.craft.helpers({
 
 Template.export_craft.helpers({
 	list_formated: function(param){
-		console.log(param);
+		//console.log(param);
 		if ((param) && (param !== ''))
 		{
 			var temp = param.split(';');
-					temp = '<ul><li>'+temp.join('</li><li>')+'</li><ul/>';
+					temp = '<ul><li>'+temp.join('</li><li>')+'</li></ul>';
 			return temp;
 		}
+	},
+	ammo_info: function(){
+		var info = (this.ammo_details).split(';');
+				info = '<ul><li>'+info.join('</li><li>')+'</li></ul>';
+		return info;
+	},
+	href: function(){
+		return this;
 	},
 });
 
