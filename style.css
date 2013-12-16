@@ -182,3 +182,14 @@ body aside {
 .table.modules p { font-size: 12px; margin-bottom: 5px; }
 .table.modules p .input-sm { display: inline-block; width: 100px; margin-right: 10px; }
 .table.modules p .input-sm {  }
+
+
+#iron-router-progress.spinner:before {
+    border-color : red;
+    right: 50%;
+}
+
+#iron-router-progress {
+    background-color : red;
+    box-shadow       : 0 0 5px red;
+}

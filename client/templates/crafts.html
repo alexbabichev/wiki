@@ -9,7 +9,7 @@
 	</h2>
 	<hr>
 	<div class="row">
-		<div class="col-sm-10 craft_info">
+		<div class="col-sm-9 craft_info">
 			<section>{{{summary}}}</section>
 			<section>
 				<h4 class="lead">Конструкция</h4>
@@ -93,13 +93,27 @@
 					{{/each}}				</article>
 			</section>
 		</div>
-		<div class="col-sm-2 craft_sidebar">
+		<div class="col-sm-3 craft_sidebar">
 			<p><img src="/crafts/{{_id}}.png"></p>
 			<p><strong>Год: </strong>{{year}}</p>
 			<p><strong>Нация: </strong>{{nation}}</p>
 			<p><strong>Тип: </strong>{{type}}</p>
 			<p><strong>Класс: </strong>{{class}}</p>
+			<p><strong>Ранг: </strong>{{rang}}</p>
 			<p></p>
+			<p></p>
+			<p></p>
+			<section>
+				<h4 class="lead">ЛТХ</h4>
+					<table>
+							<tr><td>Макс. скорость</td><td>{{params.speed}}</td></tr>
+							<tr><td>Макс. высота</td><td>{{params.altitude}}</td></tr>
+							<tr><td>Время виража</td><td>{{params.turntime}}</td></tr>
+							<tr><td>Скороподъемность</td><td>{{params.climb}}</td></tr>
+							<tr><td>Длина разбега</td><td>{{params.takeoff}}</td></tr>
+							<tr><td width="150">Вес секундного залпа</td><td>{{params.burst}}</td></tr>
+					</table>
+			</section>
 		</div>
 	</div>
 		

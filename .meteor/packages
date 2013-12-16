@@ -8,3 +8,5 @@ standard-app-packages
 insecure
 preserve-inputs
 iron-router
+iron-router-progress
+http
