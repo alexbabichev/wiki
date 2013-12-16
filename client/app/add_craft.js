@@ -113,6 +113,7 @@ Template.add_craft.events({
 				data.modules = {};
 				data.ammo = [];
 				data.links = [];
+				data.params = {};
 
 		
 		data.class = $('#class').val();
@@ -128,6 +129,14 @@ Template.add_craft.events({
 				params.enabled = true;
 				data.modules[id] = params;				
 			}
+		});
+
+		$('div.params').each(function(){
+				var params = {};
+				$(this).find('input').each(function(){
+					params[$(this).attr('id')] = $(this).val();
+				})
+				_.extend(data.params, params)
 		});
 		
 		$('article.ammo').each(function(){

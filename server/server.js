@@ -23,41 +23,52 @@ Meteor.startup(function () {
 		}
 	});
 	
+/*
 		var crafts = Crafts.find().fetch();
 	//var temps  = Temp.find().fetch();
 	
-/*
 	_.each(crafts, function(data){
+	
 		temps  = (Temp.find({_name: data.name}).fetch())[0];
 		if (temps)
 		{
-			var params = {};
-			var set = {};
-					set.fullname = temps.name;
-					if (temps['Rank'])
-						set.rang = temps['Rank'];
-
-			params.speed = temps['Maximum Speed'];
-			params.burst = temps['Burst Mass'];
-			params.altitude = temps['Maximum Altitude'];
-			params.turntime = temps['7224 m'];
-			params.climb = temps['Rate of Climb'];
-			params.takeoff = temps['Takeoff Run'];
-			params.ammo = temps['Armament'];
-			
-			set.params = params;
-
-			
-			Crafts.update({_id: data._id}, {$set: set}, function(error, result){
-				console.log(data._id, temps['Rank']);
-			});
-
+			var img = temps['img'];
+			//console.log(img);
+			//save_icon(data._id, img);
 		}
-
+	
 	});
 */
+	
 
-/* Crafts.update({_id:'GoW2TahQSdySM3ZuP'}, {$set:{rang:2}}); */
+	
 
 	
 });
+
+
+
+function save_icon(icon_name, icon){
+	
+	var http 	= Npm.require('http'),
+	  	fs 		= Npm.require('fs');
+	
+	if (icon.indexOf('http') > -1)
+	{
+
+		var request = http.get(icon, function(res){
+	    var imagedata = ''
+	    res.setEncoding('binary')
+	    res.on('data', function(chunk){
+	        imagedata += chunk
+	    })
+	    res.on('end', function(){
+	       	fs.writeFile('../../../../../../old_images/'+icon_name+'.png', imagedata, 'binary')
+	    })
+		});
+		
+	}
+
+
+}
+
