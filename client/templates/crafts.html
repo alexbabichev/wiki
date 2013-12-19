@@ -1,7 +1,7 @@
 <template name="craft">
 	{{title name}}
 	<h2 class="lead row">
-		<span class="col-sm-8">{{name}}</span>
+		<span class="col-sm-8 title" data-name="{{name}}">{{name}}<small>{{fullname}}</small></span>
 		<span class="col-sm-4" style="text-align: right">
 			<a class="btn btn-default" href="/export_craft/{{_id}}">Экспорт</a>
 			<a class="btn btn-default" href="/edit_craft/{{_id}}">Редактировать</a>
@@ -95,15 +95,20 @@
 		</div>
 		<div class="col-sm-3 craft_sidebar">
 			<p><img class="old_photo" src="/old_images/{{_id}}.png"></p>
-			<p><strong>Год: </strong>{{year}}</p>
-			<p><strong>Нация: </strong>{{nation}}</p>
-			<p><strong>Тип: </strong>{{type}}</p>
-			<p><strong>Класс: </strong>{{class}}</p>
 			<p><strong>Ранг: </strong>{{rang}}</p>
-			<p></p>
+			<p><strong>Нация: </strong>{{nation}}</p>
+			<p><strong>Класс: </strong>{{class}}</p>
+			<p><strong>Год: </strong>{{year}}</p>
+			<p><strong>Тип: </strong>{{type}}</p>
+			<p>&nbsp;</p>
+			<p><strong>Боевой рейтинг: </strong>{{fight_rate}}</p>
+			<p><strong>Бонус к очкам исследования: </strong>{{bonus_exp}}</p>
+			<p><strong>Награда: </strong>{{bonus}}</p>
+			<p>&nbsp;</p>
+
 			<section>
-				<h4 class="lead">ЛТХ</h4>
-					<table class="table">
+				<h4 class="lead">ЛТХ <a class="active" href="#">Аркадные бои</a><a href="#">РБ</a><a href="#">CБ</a></h4>
+					<table class="table ltx">
 							<tr><td>Макс. скорость</td><td>{{params.speed}}</td></tr>
 							<tr><td>Макс. высота</td><td>{{params.altitude}}</td></tr>
 							<tr><td>Время виража</td><td>{{params.turntime}}</td></tr>

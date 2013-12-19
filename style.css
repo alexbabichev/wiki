@@ -38,8 +38,6 @@ hr {
 	opacity: 0.5; 
 }
 
-.right { text-align: right; }
-
 h4.lead {
 	font-size: 20px;
 }
@@ -62,6 +60,8 @@ h4.lead {
 .btn-primary { background-color: #7ba60d }
 .btn-primary:hover { background-color: #7ba60d; }
 
+.right { text-align: right; }
+
 /* aside 				--------------------------------------- */
 
 body aside {
@@ -75,10 +75,6 @@ body aside {
 		aside ul.dropdown-menu.navmenu-nav {
 			margin-top: 0 !important;
 		}
-		.nav .open > a, .nav .open > a:hover, .nav .open > a:focus { border: 0; }
-		aside ul li {
-		/* 	border-bottom: 1px solid #333; */
-		}
 		aside ul a { 
 			color: #aaa;
 			font-size: 12px; 
@@ -87,6 +83,8 @@ body aside {
 			text-shadow: 0 1px 0 rgba(0,0,0,0.5);
 			background-color: transparent;
 		}
+
+		.nav .open > a, .nav .open > a:hover, .nav .open > a:focus { border: 0; }
 		
 		.navmenu-inverse .navmenu-nav > .active > a {
 			text-shadow: 0 -1px 0 rgba(0,0,0,0.3);
@@ -95,7 +93,9 @@ body aside {
 		
 		.navmenu-inverse { background-color: #1b2529; border: none; border-radius: 0; }
 		
-		.navmenu-brand {text-align: center;}
+		.navmenu-brand {text-align: center; width: 240px; display: inline-block;}
+		.navmenu-brand img { width: 100%; height: auto; }
+		.navmenu-brand:hover { opacity: 1; }
 
 /* homepage 		--------------------------------------- */
 
@@ -118,18 +118,23 @@ body aside {
 
 /* view craft		--------------------------------------- */
 
+ h2	span.title { position: relative; }
+ h2	span.title small { 
+ 	padding-left: 17px; color: #444; font-size: 14px;
+ 	position: absolute; bottom: -10px; left: 0;
+	opacity: 0.5;
+ }
+
 .craft_sidebar p 				{ font-size: 12px; 	margin-bottom: 0; }
 .craft_sidebar h4.lead 	{ margin-bottom: 5px; }
+.craft_sidebar h4.lead a { font-size: 12px; padding-left: 20px; color: #444; opacity: 0.5;  }
+.craft_sidebar h4.lead a.active { opacity: 1 }
 
 .craft_sidebar img.old_photo {width: 100%; margin-bottom: 20px; margin-top: 15px;}
 
-.craft_info section {
-	
-}
 .craft_info section h4 { 
-	margin-bottom: 0; /* color: #2980B9; color: #5C7D7D */; 
+	margin-bottom: 0; 
 	border-left: 5px solid #dd3317; 
-	/* border-top: 1px bottom #dd3317; */
 	background-color: rgba(0,0,0,0.05);
 	padding-left: 15px;  
 	padding-top: 5px;
@@ -139,6 +144,9 @@ body aside {
 .craft_info section p {
 	font-size: 12px;
 }
+table.ltx td:first-child { padding-left: 0; }
+table.ltx td:last-child { padding-right: 0; text-align: right; }
+
 .craft_info section ul {
 	padding-left: 15px; 
 	margin-top: 10px;
@@ -160,6 +168,7 @@ body aside {
 .craft_info .module:hover .module_info { display: block; }
 
 
+
 /* add craft		--------------------------------------- */
 
 .add_craft label small { opacity: 0.5; margin-left: 3px; font-style: italic;  }
@@ -169,20 +178,19 @@ body aside {
 .ammo_details  { display: none; } 
 
 .module a { cursor: pointer; display: inline-block; }
-.module a:hover {  outline: 3px solid #CCC; }
+	.module a:hover {  outline: 3px solid #CCC; }
 
 .module.disabled .data { display: none; }
 
 /* fixes		 		--------------------------------------- */
 
-.checkbox .icons .first-icon, .radio .icons .first-icon, .checkbox .icons .second-icon, .radio .icons .second-icon
-{
-	background-color: transparent;
-}
-.table.modules p { font-size: 12px; margin-bottom: 5px; }
-.table.modules p .input-sm { display: inline-block; width: 100px; margin-right: 10px; }
-.table.modules p .input-sm {  }
+.checkbox .icons .first-icon, .radio .icons .first-icon, 
+.checkbox .icons .second-icon, .radio .icons .second-icon { background-color: transparent; }
 
+.table.modules p { font-size: 12px; margin-bottom: 5px; }
+	.table.modules p .input-sm { display: inline-block; width: 100px; margin-right: 10px; }
+
+/* progress bar	--------------------------------------- */
 
 #iron-router-progress.spinner:before {
     border-color : red;
@@ -191,5 +199,5 @@ body aside {
 
 #iron-router-progress {
     background-color : red;
-    box-shadow       : 0 0 5px red;
+    box-shadow       : 0;
 }

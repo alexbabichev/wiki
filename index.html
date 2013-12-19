@@ -17,7 +17,6 @@
 			<nav class="navmenu navmenu-inverse" role="navigation">
 			  <a class="navmenu-brand" href="/">
 			  	<img src="/logo.png"><br>
-					<span>WIKI</span>
 			  </a><br><br>
 			  <ul class="nav navmenu-nav">
 			    <li class="active"><a href="/">Техника</a></li>
@@ -37,6 +36,31 @@
 		  {{yield}}
 	  </section>
 	</section>
+</template>
+
+
+<template name="view_all">
+	{{title 'Авиация'}}
+
+	<h2 class="lead row">
+		<span class="col-sm-8">Авиация</span>
+		<span class="col-sm-4 lead-search">
+			<input type="search" class="form-control search" placeholder="Быстрый поиск">
+		</span>
+	</h2>
+	<hr>
+	<table class="table">
+		{{#each crafts}}
+			<tr>
+				
+				<td class="col-sm-2">{{name}}</td>
+				<td class="col-sm-3">{{fullname}}</td>
+				<td class="col-sm-3">{{nation}}</td>
+				<td><a href="/craft/{{_id}}">{{_id}}</a></td>
+			</tr>
+		{{/each}}
+	</table>
+
 </template>
 
 

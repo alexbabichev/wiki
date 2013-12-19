@@ -11,6 +11,8 @@ Router.map(function() {
 	
 	/* --------------------------------------------------------------------------- */
 	
+	this.route('view_all', 			{ path: '/view_all', data: function(){ return Crafts.find({}, {nation: 1, name: 1});}});
+	
 	this.route('add_page');
 	
 	this.route('add_craft');

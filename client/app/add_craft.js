@@ -4,7 +4,7 @@ var isolate = 0;
 Template.add_craft.rendered = function(){
 	//if (isolate == 0)
 	{
-		$('.redactor').redactor({ lang: 'ua', minHeight: 200 });
+		$('.redactor').redactor({ minHeight: 100, lang: 'ru' });
 		$('select').selectpicker({style: 'btn-default', menuStyle: 'dropdown-inverse'}).each(function(){
 			$(this).val($(this).attr('data-value')).selectpicker('render');
 		});
