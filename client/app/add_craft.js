@@ -175,8 +175,9 @@ Template.add_craft.events({
 		Router.go('/craft/'+this._id);
 		else Router.go('homepage');
 	},
-	'click .delete': function()
+	'click .delete': function(e)
 	{
+		e.preventDefault();
 		Crafts.remove(this._id);
 		Router.go('homepage');
 	},
