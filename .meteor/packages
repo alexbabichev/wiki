@@ -10,3 +10,7 @@ preserve-inputs
 iron-router
 iron-router-progress
 http
+collectionFS
+accounts-base
+accounts-password
+cfs-public-folder

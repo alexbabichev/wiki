@@ -1,6 +1,8 @@
 Meteor.startup(function () {
 
-	var fs = Npm.require('fs')
+	var fs = Npm.require('fs');
+	
+	//Accounts.createUser({username: 'alex', password : '123'}); 
 
 	/* publish ------------------------------------------------------------------ */  
 	
@@ -13,6 +15,21 @@ Meteor.startup(function () {
 	Meteor.publish("editlog", function () {
   	return EditLog.find();
 	});
+	Meteor.publish("images", function () {
+  	return Images.find();
+	});
+	
+	var handler = {
+	  "default": function (options) {
+	  	console.log('I am handling default1: ' + options.fileRecord.filename);
+	    return {
+	      blob: options.blob,
+	      fileRecord: options.fileRecord
+	    };
+	  }
+	}
+
+	Images.fileHandlers(handler);
 	
 	/* methods ------------------------------------------------------------------ */
 	

@@ -6,3 +6,7 @@ EditLog	= new Meteor.Collection("editlog");
 
 
 Temp	= new Meteor.Collection("temp");
+
+
+Images	= new CollectionFS("Images");
+

@@ -110,6 +110,9 @@
 			</div>
 		</div>
 	</form>
+	{{#each file}}
+		<img src='{{cfsFileUrl "default"}}' />
+	{{/each}}
 </template>
 
 <template name="view_module">

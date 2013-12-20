@@ -33,7 +33,6 @@ Template.craft.helpers({
 		return (data.modules[this._id]).enabled;		
 	},
 	mod_val: function(data){
-		console.log(data, this);
 		if ((this._id) && (data.modules))
 		if (_.isObject(data.modules[this._id]))
 		return (data.modules[this._id])[this.id];

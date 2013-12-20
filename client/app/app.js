@@ -1,6 +1,7 @@
 Meteor.subscribe("crafts");
 Meteor.subscribe("modules");
 Meteor.subscribe("editlog");
+Meteor.subscribe("images");
 
 Handlebars.registerHelper("title", function(title) {
     if(title) {
@@ -9,6 +10,8 @@ Handlebars.registerHelper("title", function(title) {
         document.title = "War Thunder wiki app";
     }
 });
+
+
 
 /* --------------------------------------------------------------------------------------------------------- */
 
@@ -48,6 +51,9 @@ Template.homepage.created = function(){
           $(this).toggle(id.indexOf(value) !== -1);
       });
   });	
+
+	Meteor.loginWithPassword('alex', '123');
+
 }
 
 

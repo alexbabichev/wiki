@@ -16,10 +16,11 @@ Template.add_module.events({
 		var file = $('#file-icon')[0].files[0];
 		var reader = new FileReader();
 		reader.onload = function(fileLoadEvent) {
-		  Meteor.call('file-upload', file, reader.result, id);
+		  //Meteor.call('file-upload', file, reader.result, id);
+		  Images.storeFile(file, {name: id});
 		};		
 		reader.readAsBinaryString(file);
-		Router.go('modules');
+		//Router.go('modules');
 	},
 	'click .cancel' : function()
 	{
@@ -32,6 +33,11 @@ Template.add_module.events({
 	}
 });
 
+Template.add_module.helpers({
+	file: function(){
+		return Images.find({'metadata.name': this._id});
+	}
+})
 
 
 Template.modules.rendered = function(){
@@ -39,6 +45,7 @@ Template.modules.rendered = function(){
 }
 
 Template.modules.module = function(){
+	
 	return Modules.find();
 }
 
@@ -59,4 +66,5 @@ Template.view_module.helpers({
 		}
 		return type;	
 	},	
+
 });
