@@ -182,6 +182,12 @@ table.ltx td:last-child { padding-right: 0; text-align: right; }
 
 .module.disabled .data { display: none; }
 
+
+/* add module		--------------------------------------- */
+
+span.icon { display: inline-block; position: relative; margin-left: 5px; }
+	span.icon .close { position: absolute; background-color: white; border-radius: 50%; }
+
 /* fixes		 		--------------------------------------- */
 
 .checkbox .icons .first-icon, .radio .icons .first-icon, 

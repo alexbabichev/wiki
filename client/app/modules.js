@@ -1,11 +1,12 @@
 Template.add_module.rendered = function(){
-		$("select[name='type']").selectpicker({style: 'btn-default', menuStyle: 'dropdown-inverse'}).each(function(){
+		if ($('.btn-group.select').size() == 0)
+		$("#type").selectpicker({style: 'btn-default', menuStyle: 'dropdown-inverse'}).each(function(){
 			$(this).val($(this).attr('data-value')).selectpicker('render');
 		});
 	}
 
 Template.add_module.events({
-	'click .save' : function(e){
+	'click .save': function(e){
 		e.preventDefault();
 		var that = this,
 				id,
@@ -16,20 +17,23 @@ Template.add_module.events({
 		var file = $('#file-icon')[0].files[0];
 		var reader = new FileReader();
 		reader.onload = function(fileLoadEvent) {
-		  //Meteor.call('file-upload', file, reader.result, id);
-		  Images.storeFile(file, {name: id});
+		  Meteor.call('file-upload', file, reader.result, id);
 		};		
 		reader.readAsBinaryString(file);
-		//Router.go('modules');
+		Router.go('modules');
 	},
-	'click .cancel' : function()
+	'click .cancel': function()
 	{
 		$('form').trigger('reset');
 	},
-	'click .delete' : function()
+	'click .delete': function()
 	{
 		Modules.remove(this._id);
 		Router.go('modules');
+	},
+	'click .del-icon': function(e){
+		var id = $(e.currentTarget).data('id');
+		Meteor.call('file-delete', id);
 	}
 });
 
@@ -37,15 +41,13 @@ Template.add_module.helpers({
 	file: function(){
 		return Images.find({'metadata.name': this._id});
 	}
-})
-
+});
 
 Template.modules.rendered = function(){
 	appRoutine.autosearch();
 }
 
 Template.modules.module = function(){
-	
 	return Modules.find();
 }
 

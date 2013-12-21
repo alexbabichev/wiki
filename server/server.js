@@ -21,7 +21,7 @@ Meteor.startup(function () {
 	
 	var handler = {
 	  "default": function (options) {
-	  	console.log('I am handling default1: ' + options.fileRecord.filename);
+	  	console.log('I am handling default: ' + options.fileRecord.filename);
 	    return {
 	      blob: options.blob,
 	      fileRecord: options.fileRecord
@@ -35,8 +35,10 @@ Meteor.startup(function () {
 	
 	Meteor.methods({
 		'file-upload': function (fileInfo, fileData, _id) {
-			//console.log("received file " + fileInfo.name);
-			fs.writeFile('../../../../../public/'+_id+'.png', fileData, 'binary');
+			Images.storeBuffer(fileInfo.name, fileData, {metadata: {name: _id}, encoding: 'binary'})
+		},
+		'file-delete': function (fileId){
+			Images.remove(fileId);
 		}
 	});
 	
